@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: large;
+}
+:root {
+    --main-color:rgb(23,107,239);
+  --wrong-color: rgb(255,62,48);
+  --correct-color: rgb(23,156,82); 
+  
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkcyan;
+  place-items:center
+}
+
+body.correct {
+  background-color: var(--correct-color);
+}
+
+body.wrong {
+  background-color: var(--wrong-color);
+}
+
+.container {
+  width: 50rem ;
+  max-width: 80%;
+  max-height: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 5px 0.1px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  color: white;
+  background-color: var(--main-color);
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+.btn:hover {
+    background-color: blue;
+}
+
+.btn.correct{
+    background-color: var(--correct-color);
+}
+
+.btn.wrong{
+    background-color: var(--wrong-color);
+}
+
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
